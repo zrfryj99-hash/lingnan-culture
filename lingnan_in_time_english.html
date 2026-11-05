@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#263d32">
+<title>Lingnan in Time | A Journey Through Culture</title>
+<style>
+:root{--green:#263d32;--green2:#40594a;--red:#9c4938;--gold:#b58a50;--cream:#f4efe4;--paper:#e9dfcc;--ink:#282a24;--muted:#746f62;--line:rgba(58,55,43,.18);--serif:"Songti SC","STSong","Noto Serif CJK SC",serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--serif);line-height:1.8}a{color:inherit;text-decoration:none}button{font:inherit}.topbar{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:15px 5.5%;background:rgba(244,239,228,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{font-size:20px;letter-spacing:.18em;color:var(--green);font-weight:bold}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.25em;color:var(--gold);margin-top:-5px}.nav{display:flex;gap:25px;font-size:13px;color:#514f45}.nav a:hover{color:var(--red)}.menu{display:none;background:none;border:0;font-size:23px;color:var(--green)}
+.hero{min-height:790px;height:100vh;max-height:980px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(20,35,28,.82),rgba(20,35,28,.35) 58%,rgba(20,35,28,.1)),url('https://images.unsplash.com/photo-1518005020951-e7a5b258ab6e?auto=format&fit=crop&w=2200&q=85') center/cover;color:#f7f0df}
+.hero:after{content:"";position:absolute;inset:18px;border:1px solid rgba(238,218,178,.45);pointer-events:none}.hero-inner{position:relative;z-index:1;width:min(1120px,88%);margin:70px auto 0}.eyebrow{font:12px Arial,sans-serif;letter-spacing:.34em;color:#d9bd8c}.hero h1{font-size:clamp(58px,9vw,116px);font-weight:400;letter-spacing:.16em;line-height:1.15;margin:28px 0 20px}.hero h1 span{display:block;font-size:clamp(18px,2.4vw,27px);letter-spacing:.48em;color:#e1c99f;margin-top:22px}.hero p{max-width:510px;color:#eee4d1;font-size:16px;letter-spacing:.08em}.hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}.btn{padding:11px 27px;border:1px solid #d9bd8c;color:#f7f0df;letter-spacing:.12em;font-size:13px;transition:.25s}.btn.primary{background:#9c4938;border-color:#9c4938}.btn:hover{transform:translateY(-3px);background:#b58a50;border-color:#b58a50}.vertical{position:absolute;right:8%;bottom:12%;writing-mode:vertical-rl;letter-spacing:.3em;font-size:12px;color:#e8d8b9}
+.section{padding:110px 7%;position:relative}.section-head{text-align:center;max-width:720px;margin:0 auto 55px}.kicker{font:11px Arial,sans-serif;letter-spacing:.32em;color:var(--red);text-transform:uppercase}.section h2{font-weight:400;font-size:clamp(32px,4vw,48px);letter-spacing:.12em;color:var(--green);margin:12px 0}.section-head p{color:var(--muted);font-size:14px}.intro{background:var(--paper)}.intro-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}.intro-art{min-height:430px;position:relative;background:url('https://images.unsplash.com/photo-1599571234909-29ed5d1321d6?auto=format&fit=crop&w=1200&q=85') center/cover}.intro-art:after{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.7)}.seal{position:absolute;right:-22px;bottom:28px;background:var(--red);color:#f5e9d1;padding:13px 10px;writing-mode:vertical-rl;letter-spacing:.18em;font-size:14px;box-shadow:0 8px 20px #0002}.intro-copy h3{font-size:27px;font-weight:400;color:var(--green);margin:0 0 18px}.intro-copy p{font-size:15px;color:#5d5a50}.factline{display:flex;gap:22px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}.factline strong{display:block;color:var(--red);font-size:24px;font-weight:400}.factline span{font-size:12px;color:var(--muted)}
+.cards{max-width:1160px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.culture-card{background:#eee7d9;border:1px solid var(--line);transition:.3s;overflow:hidden}.culture-card:hover{transform:translateY(-7px);box-shadow:0 15px 35px #30291b18}.culture-card img{width:100%;height:235px;object-fit:cover;display:block;filter:saturate(.78)}.card-body{padding:22px 23px 25px}.card-no{font:11px Arial,sans-serif;letter-spacing:.2em;color:var(--red)}.card-body h3{font-size:22px;font-weight:400;color:var(--green);margin:6px 0}.card-body p{font-size:13px;color:var(--muted);margin:0}.tag{display:inline-block;border:1px solid #c9b99c;padding:3px 9px;margin-top:15px;font-size:11px;color:#74664d}
+.architecture{background:var(--green);color:#eee6d5}.architecture .section-head h2{color:#f2e8d5}.architecture .section-head p{color:#c6c3b4}.arch-grid{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;gap:22px}.arch-large{position:relative;min-height:490px;background:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1300&q=85') center/cover}.arch-large:after,.arch-small:after{content:"";position:absolute;inset:12px;border:1px solid #f1dfbd88}.arch-caption{position:absolute;z-index:1;bottom:28px;left:30px;color:white;text-shadow:0 2px 8px #000}.arch-caption h3{font-size:28px;font-weight:400;margin:0}.arch-caption p{font-size:13px;margin:4px 0}.arch-side{display:grid;grid-template-rows:1fr 1fr;gap:22px}.arch-small{position:relative;min-height:230px;background-position:center;background-size:cover}.arch-small:first-child{background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85')}.arch-small:last-child{background-image:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=85')}
+.food{background:#eee6d8}.food-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.food-item{position:relative;height:320px;overflow:hidden;background:#ddd}.food-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s;filter:saturate(.8)}.food-item:hover img{transform:scale(1.07)}.food-label{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 17px;color:white;background:linear-gradient(transparent,#171711c9)}.food-label h3{font-size:20px;font-weight:400;margin:0}.food-label p{font-size:11px;margin:2px 0 0;color:#eee2cd}
+.heritage{background:var(--paper)}.heritage-list{max-width:940px;margin:auto;border-top:1px solid var(--line)}.heritage-row{display:grid;grid-template-columns:90px 1fr 2fr;gap:25px;padding:24px 8px;border-bottom:1px solid var(--line);align-items:center}.heritage-row .num{font:12px Arial,sans-serif;color:var(--red);letter-spacing:.16em}.heritage-row h3{font-size:22px;font-weight:400;color:var(--green);margin:0}.heritage-row p{font-size:13px;color:var(--muted);margin:0}
+.timeline{max-width:900px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#bca77f}.time-item{width:50%;padding:0 45px 38px 0;position:relative}.time-item:nth-child(even){margin-left:50%;padding:0 0 38px 45px}.time-item:after{content:"";position:absolute;right:-6px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--red);border:3px solid var(--cream)}.time-item:nth-child(even):after{right:auto;left:-6px}.time-item strong{font:13px Arial,sans-serif;color:var(--red);letter-spacing:.15em}.time-item h3{font-size:21px;font-weight:400;color:var(--green);margin:5px 0}.time-item p{font-size:13px;color:var(--muted);margin:0}
+.map-section{background:#e8dfcf}.map-panel{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#cbbd9f;border:1px solid #cbbd9f}.map-point{background:#f1eadc;padding:24px 18px;text-align:center}.map-point .pin{font-size:22px;color:var(--red)}.map-point h3{font-size:18px;font-weight:400;color:var(--green);margin:8px 0 4px}.map-point p{font-size:12px;color:var(--muted);margin:0}
+.quote{padding:100px 7%;text-align:center;background:linear-gradient(rgba(30,47,37,.78),rgba(30,47,37,.84)),url('https://images.unsplash.com/photo-1518005020951-e7a5b258ab6e?auto=format&fit=crop&w=1800&q=85') center/cover;color:#f2e7d2}.quote blockquote{max-width:800px;margin:0 auto;font-size:clamp(23px,3vw,34px);line-height:1.8;letter-spacing:.12em}.quote p{font-size:12px;letter-spacing:.3em;color:#d7bd91;margin-top:25px}
+footer{padding:35px 7%;background:#1e3027;color:#d5c9b1;text-align:center;font-size:12px;letter-spacing:.12em}footer strong{font-size:18px;font-weight:400;display:block;margin-bottom:7px}.backtop{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:1px solid #b58a50;background:#263d32;color:#f5ead6;border-radius:50%;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}.backtop.show{opacity:1;pointer-events:auto}
+@media(max-width:800px){.nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--cream);padding:18px 7%;flex-direction:column;gap:12px;border-bottom:1px solid var(--line)}.nav.open{display:flex}.menu{display:block}.hero{min-height:700px}.hero h1{font-size:62px}.intro-grid,.arch-grid{grid-template-columns:1fr}.intro-art{min-height:330px}.cards{grid-template-columns:repeat(2,1fr)}.food-grid{grid-template-columns:repeat(2,1fr)}.map-panel{grid-template-columns:repeat(2,1fr)}.heritage-row{grid-template-columns:55px 1fr;gap:12px}.heritage-row p{grid-column:2}.arch-large{min-height:360px}}
+@media(max-width:520px){.section{padding:78px 6%}.hero-inner{width:82%}.hero h1{font-size:50px}.hero h1 span{letter-spacing:.25em}.cards{grid-template-columns:1fr}.culture-card img{height:220px}.food-item{height:245px}.factline{gap:14px}.time-item{padding-right:25px}.time-item:nth-child(even){padding-left:25px}.quote{padding:75px 8%}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home">Lingnan in Time<small>LINGNAN · CULTURE JOURNAL</small></a>
+  <button class="menu" id="menuBtn" aria-label="打开导航">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#about">Discover Lingnan</a><a href="#architecture">Architecture</a><a href="#food">Flavours</a><a href="#heritage">Living Heritage</a><a href="#history">Through Time</a><a href="#future">Lingnan Today</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div class="eyebrow">A JOURNEY THROUGH LINGNAN</div>
+  <h1>Lingnan in Time<span>A JOURNEY THROUGH CULTURE</span></h1>
+  <p>Between mountains and sea, culture comes alive in everyday moments. Follow the graceful lines of arcade streets, the rhythm of lion-dance drums and the steam rising from teahouses into a world shaped by exchange, creativity and enduring traditions.</p>
+  <div class="hero-actions"><a class="btn primary" href="#about">Begin the Journey</a><a class="btn" href="#heritage">Explore Living Heritage</a></div>
+ </div>
+ <div class="vertical">SOUTH OF THE FIVE RIDGES · A LAND OF MANY STORIES</div>
+</section>
+<section class="section intro" id="about">
+ <div class="section-head"><div class="kicker">01 / ABOUT LINGNAN</div><h2>Discover Lingnan</h2><p>A distinctive landscape shapes a distinctive spirit. Centuries of exchange have left a rich cultural legacy.</p></div>
+ <div class="intro-grid"><div class="intro-art"><div class="seal">Lingnan Heritage</div></div><div class="intro-copy">
+  <h3>Where Mountains Meet the Sea</h3>
+  <p>Lingnan broadly refers to the lands south of the Five Ridges in southern China. Its cultural landscape is especially associated with Guangdong, Guangxi and Hainan. A warm, humid climate, an extensive coastline and a network of rivers have shaped a way of life that is open, practical, expressive and inventive.</p>
+  <p>From the ancient Nanyue kingdom to the Maritime Silk Road, and from Cantonese and Chaoshan communities to Hakka traditions, different peoples have met and influenced one another here. Lingnan culture is rooted in history while remaining open to change.</p>
+  <div class="factline"><div><strong>Centuries</strong><span>of history</span></div><div><strong>Diversity</strong><span>of cultural exchange</span></div><div><strong>Openness</strong><span>and a maritime spirit</span></div></div>
+ </div></div>
+</section>
+<section class="section" id="architecture">
+ <div class="section-head"><div class="kicker">02 / ARCHITECTURE</div><h2>檐角之间 · Architecture</h2><p>Let the breeze pass through the arcades and sunlight fall across coloured glass. Lingnan architecture responds to its climate while turning everyday life into a work of art.</p></div>
+ <div class="arch-grid"><div class="arch-large"><div class="arch-caption"><h3>Arcade Houses · Streets for Living</h3><p>Shelter from sun and rain, with shops and homes woven together</p></div></div><div class="arch-side"><div class="arch-small"><div class="arch-caption"><h3>锅耳墙</h3><p>Curved gables symbolising protection and prosperity</p></div></div><div class="arch-small"><div class="arch-caption"><h3>Ancestral Halls & Coloured Windows</h3><p>Intricate wood and stone carving, vivid glass and fine craftsmanship</p></div></div></div></div>
+</section>
+<section class="section food" id="food">
+ <div class="section-head"><div class="kicker">03 / TASTE OF LINGNAN</div><h2>一盅两件 · Flavours</h2><p>Tea fragrance drifts through the morning as the city wakes. Everyday Lingnan life is often best understood around a table.</p></div>
+ <div class="food-grid">
+  <div class="food-item"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=85" alt="中式点心"><div class="food-label"><h3>Cantonese Dim Sum</h3><p>Tea, small bites and unhurried conversation</p></div></div>
+  <div class="food-item"><img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=800&q=85" alt="中式米食"><div class="food-label"><h3>Rice Noodle Rolls</h3><p>Silky rice rolls with savoury sauce</p></div></div>
+  <div class="food-item"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=85" alt="甜品"><div class="food-label"><h3>Traditional Sweet Soups</h3><p>Double-skin milk pudding and ginger milk custard</p></div></div>
+  <div class="food-item"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=85" alt="中式饭菜"><div class="food-label"><h3>Claypot Rice</h3><p>Crisp rice crust and rich wok-fired aroma</p></div></div>
+ </div>
+</section>
+<section class="section heritage" id="heritage">
+ <div class="section-head"><div class="kicker">04 / INTANGIBLE HERITAGE</div><h2>百艺流芳 · Living Heritage</h2><p>Drumbeats, opera melodies, delicate stitches and vivid colours are messages passed down through generations.</p></div>
+ <div class="cards">
+  <article class="culture-card"><img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=900&q=85" alt="传统艺术"><div class="card-body"><span class="card-no">01 / OPERA</span><h3>Cantonese Opera</h3><p>Performed in Cantonese, this art form combines singing, speech, acting and martial movement. Its history is closely linked to the travelling red-junk opera troupes.</p><span class="tag">UNESCO Intangible Heritage</span></div></article>
+  <article class="culture-card"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=85" alt="节庆表演"><div class="card-body"><span class="card-no">02 / LION DANCE</span><h3>Lion Dance</h3><p>锣鼓一响，雄狮腾跃。Lion Dance融合武术、舞蹈与音乐，寄托祈福纳祥、奋发向上的精神。</p><span class="tag">Festivals & Community</span></div></article>
+  <article class="culture-card"><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=85" alt="传统手工艺"><div class="card-body"><span class="card-no">03 / CRAFT</span><h3>Canton Enamel & Guang Embroidery</h3><p>Guangzhou enamel is known for its rich palette and intricate patterns, while Guang embroidery is celebrated for its varied stitches and lively subjects.</p><span class="tag">Lingnan Craftsmanship</span></div></article>
+ </div>
+ <div class="heritage-list" style="margin-top:38px">
+  <div class="heritage-row"><span class="num">CRAFT 01</span><h3>Foshan Woodblock New Year Prints</h3><p>Made through block printing and hand-colouring, these vivid prints often feature door guardians and auspicious motifs.</p></div>
+  <div class="heritage-row"><span class="num">CRAFT 02</span><h3>Chaozhou Gongfu Tea</h3><p>A carefully paced tea practice involving specialised tools, measured brewing and attentive tasting. It expresses hospitality and an appreciation of daily rituals.</p></div>
+  <div class="heritage-row"><span class="num">CRAFT 03</span><h3>Hakka Mountain Songs</h3><p>Sung in Hakka dialect, these lyrical folk songs preserve memories of work, love, homeland and migration.</p></div>
+ </div>
+</section>
+<section class="section" id="history">
+ <div class="section-head"><div class="kicker">05 / THROUGH TIME</div><h2>Through Time · 文脉绵延</h2><p>Far from being isolated, Lingnan has long connected inland China with the sea, and local traditions with the wider world.</p></div>
+ <div class="timeline">
+  <div class="time-item"><strong>Pre-Qin to Han</strong><h3>Baiyue Peoples & Nanyue</h3><p>Local communities developed diverse traditions. Administrative changes and the Nanyue kingdom helped deepen connections between the Central Plains and Lingnan.</p></div>
+  <div class="time-item"><strong>Tang & Song Dynasties</strong><h3>Trade & Maritime Exchange</h3><p>Trade through Guangzhou flourished. Maritime routes brought people, goods and ideas, enriching the city and its culture.</p></div>
+  <div class="time-item"><strong>Ming & Qing Dynasties</strong><h3>Growing Ports & Overseas Communities</h3><p>Cantonese, Chaoshan and Hakka cultures continued to develop. Overseas trade and migration shaped distinctive hometowns with strong links to communities abroad.</p></div>
+  <div class="time-item"><strong>Modern Era</strong><h3>A Spirit of Innovation</h3><p>岭南成为近代思想、教育、实业与革命活动的重要区域，Openness创新的精神延续至今。</p></div>
+ </div>
+</section>
+<section class="section map-section" id="future">
+ <div class="section-head"><div class="kicker">06 / MANY VOICES, ONE LINGNAN</div><h2>One Region, Many Voices</h2><p>Cantonese street life, Chaoshan rituals, Hakka fortified homes and mountain songs all contribute to Lingnan’s rich cultural fabric.</p></div>
+ <div class="map-panel">
+  <div class="map-point"><div class="pin">✦</div><h3>Cantonese Culture</h3><p>粤语、Cantonese Opera、骑楼、广式饮茶<br>代表：广州、佛山</p></div>
+  <div class="map-point"><div class="pin">✦</div><h3>Chaoshan Culture</h3><p>Gongfu tea, Chaozhou opera, Yingge dance and porcelain inlay<br>Centres: Chaozhou, Shantou & Jieyang</p></div>
+  <div class="map-point"><div class="pin">✦</div><h3>Hakka Culture</h3><p>Walled homes, folk songs, lei cha and migration stories<br>Centres: Meizhou & Heyuan</p></div>
+  <div class="map-point"><div class="pin">✦</div><h3>Leizhou & Danjia Traditions</h3><p>Maritime life, Leizhou stone dogs and fishing traditions<br>Centres: Zhanjiang and coastal communities</p></div>
+ </div>
+ <div style="max-width:850px;margin:45px auto 0;text-align:center;color:#625e52;font-size:14px">In Lingnan today, historic neighbourhoods stand alongside modern cities. Living heritage enters schools and communities, old buildings find new life, and traditional crafts meet contemporary design. Culture is not simply preserved in museums—it continues to grow through everyday life.</div>
+</section>
+<section class="quote">
+ <blockquote>“The beauty of Lingnan lies not only in its mountains and seas, but also in its courage to explore—and in the warmth that lives on in everyday moments.”</blockquote>
+ <p>Keep traditions within reach. Let culture grow.</p>
+</section>
+</main>
+<footer><strong>Lingnan in Time</strong>A JOURNEY THROUGH CULTURE<br><span style="opacity:.65">An independent cultural showcase · Sample photographs from Unsplash; an internet connection is required to load images</span><br><span style="opacity:.5">© 2026 LINGNAN CULTURE JOURNAL</span></footer>
+<button class="backtop" id="backtop" aria-label="回到顶部">↑</button>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const topBtn=document.getElementById('backtop');
+window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>500));
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
